@@ -23,7 +23,7 @@ app.use('/', indexRouter);
 app.use('/users', usersRouter);
 
 var mongoose = require('mongoose');
-mongoose.connect('mongodb://dec0mpiled:welcometor4ge@ds249311.mlab.com:49311/summerbash', { useNewUrlParser: true });
+mongoose.connect('mongodb://dec0mpiled:welcometor4ge@ds018268.mlab.com:18268/summerbashnew', { useNewUrlParser: true });
 var db = mongoose.connection;
 db.on('error', console.error.bind(console, 'connection error:'));
 db.once('open', function() {

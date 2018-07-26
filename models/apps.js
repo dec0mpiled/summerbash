@@ -5,12 +5,7 @@ var passportLocalMongoose = require('passport-local-mongoose');
 var APP = new Schema({
     
     teamName: String,
-    playerOne: String,
-    playerTwo: String,
-    p1Console: String,
-    p2Console: String,
-    canStream: String,
-    email: String,
+    
     
 });
 

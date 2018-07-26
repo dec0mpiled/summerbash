@@ -1,7 +1,7 @@
 var express = require('express');
 var router = express.Router();
 var app = express();
-var  APP= require('../models/apps');
+var  APP = require('../models/apps');
 
 /* GET home page. */
 router.get('/', function(req, res, next) {
@@ -34,19 +34,16 @@ router.get('/apply', function(req, res, next) {
 router.post("/submitapp", function(req, res, next) {
     
     var myAPP = new APP ({
+    
         
     teamName: req.body.teamname,
-    playerOne: req.body.p1name,
-    playerTwo: req.body.p2name,
-    p1Console: req.body.p1platform,
-    p2Console: req.body.p2platform,
-    canStream: req.body.canstream,
-    email: req.body.email,
+
         
         
     });
     
     myAPP.save();
+    console.log(myAPP)
     
     res.redirect("/thanks");
     
